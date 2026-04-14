@@ -21,6 +21,21 @@ public class Line {
 		return startPoint.distance(endPoint.getX(), endPoint.getY());
 	}
 	
+	public boolean equals(Object obj) {
+		if (obj instanceof Line) {
+			Line pomocna = (Line) obj;
+			if (this.startPoint.equals(pomocna.startPoint)
+					&& this.endPoint.equals(pomocna.endPoint)
+					&& this.selected == pomocna.selected)
+				return true;
+		}
+		return false;
+	}
+	
+	public String toString() {
+		return startPoint.toString() + "-->" + endPoint;
+	}
+	
 	public Point getStartPoint() {
 		return startPoint;
 	}

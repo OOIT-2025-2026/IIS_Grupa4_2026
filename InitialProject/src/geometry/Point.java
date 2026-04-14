@@ -28,6 +28,22 @@ public class Point {
 		return d;
 	}
 	
+	// potpis i povratna vrednost moraju biti iste kao kod metode koju override
+	public String toString() {
+		return "("+x+","+y+"), selected = "+selected;
+	}
+	
+	public boolean equals(Object obj) {
+		if (obj instanceof Point) { // mora provera tipa podatka da downcast ne bi fail
+			Point pomocnaTacka = (Point)obj; //downcast
+			if(this.x==pomocnaTacka.x && this.y==pomocnaTacka.y 
+					&& this.selected==pomocnaTacka.selected)
+				return true;
+		}
+		
+		return false;
+	}
+	
 	public int getX() {
 		return x;
 	}
