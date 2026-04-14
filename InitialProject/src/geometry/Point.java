@@ -6,6 +6,21 @@ public class Point {
 	private int y;
 	private boolean selected;
 	
+	public Point() {
+	}
+	
+	public Point(int x, int y) {
+		this.x=x;
+		this.y=y;
+	}
+	
+	public Point(int x, int y, boolean selected) {
+		/*this.x=x;
+		this.y=y;*/
+		this(x,y); // ovo mora biti prva naredba u konstruktoru
+		this.selected = selected;
+	}
+	
 	public double distance(int x2, int y2) {
 		int dx = this.x - x2;
 		int dy = this.y - y2;

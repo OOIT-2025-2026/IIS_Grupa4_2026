@@ -76,6 +76,10 @@ public class Test {
 		c1.getCenter().setX(r1.area() - l1.getStartPoint().getY());
 		System.out.println("X of center of c1 = " + c1.getCenter().getX());
 
+		// Vezbe 4
+		Point p41 = new Point(60, 45);
+		Line l41 = new Line(p41, new Point(40,50));
+		l41.getStartPoint().setX(50);
 
 	}
 
