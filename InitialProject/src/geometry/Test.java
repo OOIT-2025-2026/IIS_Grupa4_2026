@@ -103,7 +103,11 @@ public class Test {
 		System.out.println(p43.equals(p44)); // poredi po referenci dok se ne override
 		// nakon redefinisanja treba da poredi po vrednosti
 		System.out.println(p43.equals(l41));
-
+		
+		//Vezbe 5
+		Donut d1 = new Donut(p1, 30, 10);
+		System.out.println(d1.toString());
+		System.out.println(d1.area());
 	}
 
 }

@@ -1,6 +1,6 @@
 package geometry;
 
-public class Circle {
+public class Circle extends Object{
 	private Point center;
 	private int radius;
 	private boolean selected;
@@ -41,6 +41,14 @@ public class Circle {
 				return false;
 		} else
 			return false;
+	}
+	
+	public boolean contains(int x, int y) {
+		return this.center.distance(x, y) <= radius;
+	}
+	
+	public boolean contains(Point p) {
+		return this.contains(p.getX(), p.getY());
 	}
 
 	public Point getCenter() {
